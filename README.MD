@@ -41,7 +41,7 @@ dropout rate - float 0-1
 gumbel-softmax temperature - float 0-1  
 gaussian noise - float 0-1  
 dataset - mnist or svhn  
-use predefine labels - True  
+use pre-defined labels - True  
 number training points - between 5000 and 60000  
 number validation / test points 10000  
 epochs - any +ve int  
@@ -64,7 +64,7 @@ regularisation learning rate - float 0-1
 semi-supervised learning rate - float 0-1  
 dropout rate - float 0-1  
 dataset - mnist or svhn  
-use predefine labels - True  
+use pre-defined labels - True  
 number training points - between 5000 and 60000  
 number validation / test points 10000  
 epochs - any +ve int  
@@ -89,7 +89,7 @@ dropout rate - float 0-1
 gumbel-softmax temperature - float 0-1  
 gaussian noise - float 0-1  
 dataset - mnist or svhn  
-use predefine labels - True  
+use pre-defined labels - True  
 number training points - between 5000 and 60000  
 number validation / test points 10000  
 epochs - any +ve int  
