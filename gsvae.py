@@ -199,7 +199,7 @@ with tf.Session() as sess:
 
 		print('Y mean: {} / std: {}'.format(np.mean(yxlogt),np.std(yxlogt)))
 		print('Z mean: {} / std: {}'.format(np.mean(zxlogt),np.std(zxlogt)))
-		if acc_t > best_accuracy:
+		if acc_t > best_accuracy and epoch > 50:
 
 			xx.save_model(saver,sess,script,name,epoch)
 			best_accuracy = acc_t

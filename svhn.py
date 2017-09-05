@@ -6,7 +6,7 @@ import scipy.io as sio
 import matplotlib.pyplot as plt
 
 
-root = "C:/Users/Rob/data/"
+root = "../data/"
 train_data = sio.loadmat(os.path.join(root,'train_32x32.mat'))
 test_data = sio.loadmat(os.path.join(root,'test_32x32.mat'))
 extra_data = sio.loadmat(os.path.join(root,'extra_32x32.mat'))
@@ -32,7 +32,7 @@ x_extra = rgb2gray(x_extra)/255.0
 
 import pickle
 # pickle the data
-pickle_file = '../../../data/svhn.pickle'
+pickle_file = '../data/svhn.pickle'
 
 f = open(pickle_file, 'wb')
 save = {
