@@ -42,7 +42,7 @@ gumbel-softmax temperature - float 0-1
 gaussian noise - float 0-1  
 dataset - mnist or svhn  
 use predefine labels - True  
-number training points - bweteen 5000 and 60000  
+number training points - between 5000 and 60000  
 number validation / test points 10000  
 epochs - any +ve int  
 number of labels any +ve int < number training points  
@@ -65,7 +65,7 @@ semi-supervised learning rate - float 0-1
 dropout rate - float 0-1  
 dataset - mnist or svhn  
 use predefine labels - True  
-number training points - bweteen 5000 and 60000  
+number training points - between 5000 and 60000  
 number validation / test points 10000  
 epochs - any +ve int  
 number of labels any +ve int < number training points  
@@ -90,7 +90,7 @@ gumbel-softmax temperature - float 0-1
 gaussian noise - float 0-1  
 dataset - mnist or svhn  
 use predefine labels - True  
-number training points - bweteen 5000 and 60000  
+number training points - between 5000 and 60000  
 number validation / test points 10000  
 epochs - any +ve int  
 number of labels any +ve int < number training points  
