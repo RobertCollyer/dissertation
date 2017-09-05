@@ -134,7 +134,7 @@ Z_KL_loss = 0.5 * tf.reduce_mean(tf.reduce_sum(tf.square(z_x_logits) + tf.exp(s_
 Y_KL_loss = -1*tf.reduce_mean(tf.reduce_sum(y_x*( tf.log(y_x+xx.TINY) - tf.log((xx.TINY+1.0)/xx.CLASSES) ),1))
 
 # elbo
-E_loss = R_loss + Z_KL_loss #+ Y_KL_loss
+E_loss = R_loss + Z_KL_loss + Y_KL_loss
 
 # semi-supervised loss
 C_loss_ = tf.nn.softmax_cross_entropy_with_logits(labels=Y,logits=y_x_logits)
@@ -146,15 +146,9 @@ C_loss = tf.reduce_mean(C_loss_)
 # 0.03 / 0.7
 E_solver = tf.train.MomentumOptimizer(ae_lr,0.9).minimize(E_loss, \
 		var_list=ae_list)
-#E_solver = tf.train.AdamOptimizer().minimize(E_loss, \
-	#var_list=ae_list)
-#E_solver = tf.train.RMSPropOptimizer(ae_lr).minimize(E_loss, \
-	#var_list=ae_list)
 
 C_solver = tf.train.MomentumOptimizer(ss_lr,0.9).minimize(C_loss, \
 	var_list=enc_y_list)
-#C_solver = tf.train.AdamOptimizer(ss_lr).minimize(C_loss, \
-	#var_list=enc_y_list)
 
 
 ### INITIALIZATIONS ############################################################
