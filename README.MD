@@ -45,7 +45,7 @@ use predefine labels - True
 number training points - between 5000 and 60000  
 number validation / test points 10000  
 epochs - any +ve int  
-number of labels any +ve int < number training points  
+number of labels - any +ve int < number training points  
 random seed - any +ve int  
 counter - any +ve int  
 
@@ -68,7 +68,7 @@ use predefine labels - True
 number training points - between 5000 and 60000  
 number validation / test points 10000  
 epochs - any +ve int  
-number of labels any +ve int < number training points  
+number of labels - any +ve int < number training points  
 random seed - any +ve int  
 counter - any +ve int  
 
@@ -93,7 +93,7 @@ use predefine labels - True
 number training points - between 5000 and 60000  
 number validation / test points 10000  
 epochs - any +ve int  
-number of labels any +ve int < number training points  
+number of labels - any +ve int < number training points  
 random seed - any +ve int  
 counter - any +ve int  
 
