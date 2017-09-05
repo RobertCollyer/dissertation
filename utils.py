@@ -9,25 +9,15 @@ import indexes as index
 ### CONSTANTS AND HYPER-PARAMETERS ###
 ###############################################################################
 
-#tf.set_random_seed(0)
-
-#IMAGE_HEIGHT = 28; IMAGE_WIDTH = IMAGE_HEIGHT; DEPTH = 1
-#PIXELS = IMAGE_HEIGHT * IMAGE_WIDTH * DEPTH
 
 BATCH_SIZE = 100
 LEARNING_RATE = 0.001
-
-#EPS = 1e-8
 CLASSES = 10
 TINY = 1e-20
-
-
 EXAMPLES = 10
 DISPLAY = 1
-
-
-C_PATCH = 3; C_STRIDE = 2; C_PAD = 'SAME'
-STRIDES=[1, C_STRIDE, C_STRIDE, 1]
+#C_PATCH = 3; C_STRIDE = 2; C_PAD = 'SAME'
+#STRIDES=[1, C_STRIDE, C_STRIDE, 1]
 
 
 def sample_gumbel(shape, eps=1e-20): 
@@ -125,9 +115,9 @@ def y_latent(e2,y_weights):
 def y_reparameterize(y_x_logits,CFY):
 
 	if CFY == 0.0:
-		y_gum = tf.nn.softmax(y_x_logits); print('NO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+		y_gum = tf.nn.softmax(y_x_logits); 
 	else:
-		y_gum = gumbel_softmax(y_x_logits,CFY,hard=False); print('YES!!!!!!!!!!!!!!!!!!!!!!!!')
+		y_gum = gumbel_softmax(y_x_logits,CFY,hard=False); 
 
 	return y_gum
 
@@ -339,7 +329,7 @@ def save_results(pickle_file, train_rep, test_rep, train_labels,test_labels):
 def load_mnist():
 
 	from tensorflow.examples.tutorials.mnist import input_data
-	mnist = input_data.read_data_sets("MNIST_data", one_hot=True)
+	mnist = input_data.read_data_sets("../data/MNIST_data", one_hot=True)
 
 	train_images = mnist.train.images
 	valid_images = mnist.validation.images
@@ -357,7 +347,7 @@ def load_mnist():
 
 def load_svhn():
 
-	pickle_file = '../../../data/svhn.pickle'
+	pickle_file = '../data/svhn.pickle'
 
 	with open(pickle_file, 'rb') as f:
 		save = pickle.load(f)

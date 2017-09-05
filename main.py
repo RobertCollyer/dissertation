@@ -59,7 +59,7 @@ for j in range(10):
 		os.system('python cvae.py 1000 1000 10 10 MSE GAUSS 0.001 0.003 1.0 0.3 1.0 svhn True {} 10000 100 2000 127 {}'.format(i,j))
 '''
 
-os.system('python plot.py 1000 1000 10 10 MSE GAUSS 0.01 0.1 0.1 1.0 0.3 0.1 svhn True 60000 10000 100 100 127 167')
+#os.system('python plot.py 1000 1000 10 10 MSE GAUSS 0.01 0.1 0.1 1.0 0.3 0.1 mnist True 60000 10000 100 100 127 167')
 		
 
 
@@ -67,6 +67,8 @@ os.system('python plot.py 1000 1000 10 10 MSE GAUSS 0.01 0.1 0.1 1.0 0.3 0.1 svh
 	#os.system('python cvae.py 1000 1000 10 10 MSE GAUSS 0.001 0.003 1.0 0.3 1.0 svhn True {} 10000 100 2000 127 15'.format(i))
 
 
+os.system('python saae.py 1000 1000 10 10 MSE GAUSS 0.01 0.1 0.1 1.0 0.3 0.1 mnist True 60000 10000 100 100 127 0')
+	
 
 '''
 
